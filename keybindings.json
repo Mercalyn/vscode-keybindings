@@ -4,7 +4,11 @@ custom keys:
 ctrl+shift+m MAP()
 ctrl+shift+l CONSOLE.LOG()
 ctrl+shift+p PROMISE()
-ctrl+shift+f FOREACH()
+ctrl+shift+f FOREACH() - must select
+ctrl+shift+g FOR()
+-
+default windows path:
+%appdata%/Roaming/Code/User
 */
 [
     {
@@ -37,14 +41,21 @@ ctrl+shift+f FOREACH()
         "command": "editor.action.insertSnippet",
         "when": "editorTextFocus",
         "args": {
-            "snippet": ".forEach((item, index) => {\n\t${TM_SELECTED_TEXT}$1\n});"
+            "snippet": "let workLeft = ${TM_SELECTED_TEXT}$0.length;\n${TM_SELECTED_TEXT}$1.forEach((item, index) => {\n\t// decrement and done\n\tworkLeft--;\n\tif(workLeft === 0){\n\t\t//\n\t};\n});"
+        }
+    },{
+        "key": "ctrl+shift+g",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus",
+        "args": {
+            "snippet": "for(let i = 0; i < ${TM_SELECTED_TEXT}$1; i++){\n\t//\n};"
         }
     },{
         "key": "ctrl+shift+m",
         "command": "editor.action.insertSnippet",
         "when": "editorTextFocus",
         "args": {
-            "snippet": ".map(item => {\n\t${TM_SELECTED_TEXT}$1\n});"
+            "snippet": ".map(item => {\n\t//${TM_SELECTED_TEXT}$1\n});"
         }
     }
 ]
