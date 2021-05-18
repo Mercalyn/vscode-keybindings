@@ -9,6 +9,9 @@ ctrl+shift+g FOR()
 -
 default windows path:
 %appdata%/Roaming/Code/User
+-
+dont forget to install:
+bracket pair colorizer
 */
 [
     {
