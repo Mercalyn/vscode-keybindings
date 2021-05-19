@@ -12,6 +12,7 @@ default windows path:
 -
 dont forget to install:
 bracket pair colorizer
+chalk
 */
 [
     {
