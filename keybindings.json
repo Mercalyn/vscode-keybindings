@@ -1,17 +1,24 @@
 /*
 custom keys:
 -
+node.js
 ctrl+shift+m MAP()
 ctrl+shift+l CONSOLE.LOG()
 ctrl+shift+p PROMISE()
 ctrl+shift+f FOREACH() - must select
 ctrl+shift+g FOR()
 -
+c
+ctrl+shift+d printf() int
+ctrl+shift+s printf() string
+ctrl+shift+l printf() float
+ctrl+shift+p printf() pointer
+ctrl+shift+f for loop
+-
 default windows path:
 %appdata%/Roaming/Code/User
 -
 dont forget to install:
-bracket pair colorizer
 chalk
 */
 [
@@ -26,40 +33,84 @@ chalk
     {
         "key": "ctrl+alt+n",
         "command": "-code-runner.run"
-    },{
+    },
+    // ---------------------------------------------------------- node.js ----------------------------------------------------------
+    {
         "key": "ctrl+shift+l",
         "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus",
+        "when": "editorTextFocus && editorLangId == 'javascript'",
         "args": {
             "snippet": "console.log(${TM_SELECTED_TEXT}$1);"
         }
     },{
         "key": "ctrl+shift+p",
         "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus",
+        "when": "editorTextFocus && editorLangId == 'javascript'",
         "args": {
             "snippet": "return new Promise((resolve, reject) => {\n\t${TM_SELECTED_TEXT}$1\n});"
         }
     },{
         "key": "ctrl+shift+f",
         "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus",
+        "when": "editorTextFocus && editorLangId == 'javascript'",
         "args": {
             "snippet": "let workLeft = ${TM_SELECTED_TEXT}$0.length;\n${TM_SELECTED_TEXT}$1.forEach((item, index) => {\n\t// decrement and done\n\tworkLeft--;\n\tif(workLeft === 0){\n\t\t//\n\t};\n});"
         }
     },{
         "key": "ctrl+shift+g",
         "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus",
+        "when": "editorTextFocus && editorLangId == 'javascript'",
         "args": {
             "snippet": "for(let i = 0; i < ${TM_SELECTED_TEXT}$1; i++){\n\t//\n};"
         }
     },{
         "key": "ctrl+shift+m",
         "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus",
+        "when": "editorTextFocus && editorLangId == 'javascript'",
         "args": {
             "snippet": ".map((item, index) => ({\n\t//${TM_SELECTED_TEXT}$1\n}));"
         }
-    }
+    },
+
+    // ---------------------------------------------------------- c ----------------------------------------------------------
+    {
+        "key": "ctrl+shift+d",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == 'c'",
+        "args": {
+            "snippet": "printf(\"%d\\n\", ${TM_SELECTED_TEXT}$1);"
+        }
+    },
+    {
+        "key": "ctrl+shift+s",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == 'c'",
+        "args": {
+            "snippet": "printf(\"%s\\n\", ${TM_SELECTED_TEXT}$1);"
+        }
+    },
+    {
+        "key": "ctrl+shift+p",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == 'c'",
+        "args": {
+            "snippet": "printf(\"%p\\n\", ${TM_SELECTED_TEXT}$1);"
+        }
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == 'c'",
+        "args": {
+            "snippet": "printf(\"%.2f\\n\", ${TM_SELECTED_TEXT}$1);"
+        }
+    },
+    {
+        "key": "ctrl+shift+f",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == 'c'",
+        "args": {
+            "snippet": "for(int i = 0; i < ${TM_SELECTED_TEXT}$1; i++){\n\t//\n}"
+        }
+    },
 ]
