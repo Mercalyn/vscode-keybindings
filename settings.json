@@ -1,0 +1,13 @@
+{
+    // append this inside %appdata%/Roaming/Code/User/settings.json
+    "saveAndRun": {
+        "commands": [
+            {
+            "match": ".c",
+            "cmd": "gcc ${file} -o ${fileBasenameNoExt} && ${fileBasenameNoExt}",
+            "useShortcut": false,
+            "silent": false
+            }
+        ]
+    }
+}
