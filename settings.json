@@ -1,13 +1,81 @@
 {
-    // append this inside %appdata%/Roaming/Code/User/settings.json
-    "saveAndRun": {
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "remote.SSH.remotePlatform": {
+        "cVPS": "linux",
+        "4GB_VPS": "linux",
+        "raspberrypi": "linux",
+        "Ubuntu_RPi": "linux",
+        "Tradebot": "linux"
+    },
+    "remote.SSH.connectTimeout": 120,
+    "workbench.editorAssociations": {
+        //"*.ipynb": "jupyter.notebook.ipynb",
+        "*.db": "default"
+    },
+    "code-runner.runInTerminal": true,
+    //"C_Cpp.intelliSenseEngine": "Disabled",
+    "clangd.path": "c:\\Users\\Admin\\AppData\\Roaming\\Code\\User\\globalStorage\\llvm-vs-code-extensions.vscode-clangd\\install\\11.0.0\\clangd_11.0.0\\bin\\clangd.exe",
+    "C_Cpp.default.browse.path": [],
+    "C_Cpp.default.compilerPath": "D:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin",
+    "C_Cpp.default.includePath": [],
+    "bracketPairColorizer.colorMode": "Independent",
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "window.zoomLevel": 1,
+    "terminal.integrated.profiles.windows": {
+        "/bin/bash (migrated)": {
+            "path": "/bin/bash",
+            "args": []
+        }
+    },
+    "remote.SSH.configFile": "C:\\Users\\Admin\\.ssh\\config",
+    "workbench.startupEditor": "none",
+    "editor.quickSuggestionsDelay": 100,
+    "security.workspace.trust.untrustedFiles": "open",
+    "bracketPairColorizer.depreciation-notice": false,
+    "editor.fontSize": 13,
+    "editor.wordWrap": "on",
+    "editor.mouseWheelScrollSensitivity": 1.8,
+    "editor.fastScrollSensitivity": 2.6,
+    "editor.hover.enabled": false,
+    "editor.inlayHints.enabled": "off",
+    "workbench.colorTheme": "Default Dark+",
+    "editor.guides.bracketPairs": true,
+    "editor.trimAutoWhitespace": false,
+    /*"saveAndRun": {
         "commands": [
             {
-            "match": ".c",
-            "cmd": "gcc ${file} -o ${fileBasenameNoExt} && ${fileBasenameNoExt}",
-            "useShortcut": false,
-            "silent": false
+                "match": "\\.cpp$",
+                "cmd": "gcc \"${file}\" \\*.cpp -o ${fileBasenameNoExt} && ${fileBasenameNoExt}",
+                "useShortcut": false,
+                "silent": false
+            },{
+                "match": "\\.go$",
+                "cmd": "go run .",
+                "useShortcut": false,
+                "silent": false
             }
         ]
-    }
+    },*/
+    "go.testOnSave": true,
+    "go.testTags": "",
+    "code-runner.ignoreSelection": true,
+    "[go]": {
+        "editor.formatOnSave": false
+        
+    },
+    "redhat.telemetry.enabled": false,
+    "cmake.configureOnOpen": true,
+    "makefile.configurations": [
+    
+    ],
+    "C_Cpp.default.enableConfigurationSquiggles": false,
+    "triggerTaskOnSave.tasks": {
+        "run": [
+            "*.h",
+            "*.cpp"
+        ],
+    },
+    "C_Cpp.default.cppStandard": "c++23",
+    "editor.lightbulb.enabled": false,
 }

@@ -1,20 +1,6 @@
 /*
 custom keys:
 -
-node.js
-ctrl+shift+m MAP()
-ctrl+shift+l CONSOLE.LOG()
-ctrl+shift+p PROMISE()
-ctrl+shift+f FOREACH() - must select
-ctrl+shift+g FOR()
--
-c
-ctrl+shift+d printf() int
-ctrl+shift+s printf() string
-ctrl+shift+l printf() float
-ctrl+shift+p printf() pointer
-ctrl+shift+f for loop
--
 default windows path:
 %appdata%/Roaming/Code/User
 -
@@ -31,42 +17,46 @@ chalk
         "command": "code-runner.run"
     },
     {
+        "key": "ctrl+shift+x",
+        "command": "workbench.action.tasks.runTask"
+    },
+    {
         "key": "ctrl+alt+n",
         "command": "-code-runner.run"
     },
-    // ---------------------------------------------------------- node.js ----------------------------------------------------------
+    // ---------------------------------------------------------- node.js // typescript ----------------------------------------------------------
     {
         "key": "ctrl+shift+l",
         "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus && editorLangId == 'javascript'",
+        "when": "editorTextFocus && editorLangId == 'javascript' || 'typescript'",
         "args": {
             "snippet": "console.log(${TM_SELECTED_TEXT}$1);"
         }
     },{
         "key": "ctrl+shift+p",
         "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus && editorLangId == 'javascript'",
+        "when": "editorTextFocus && editorLangId == 'javascript' || 'typescript'",
         "args": {
             "snippet": "return new Promise((resolve, reject) => {\n\t${TM_SELECTED_TEXT}$1\n});"
         }
     },{
         "key": "ctrl+shift+f",
         "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus && editorLangId == 'javascript'",
+        "when": "editorTextFocus && editorLangId == 'javascript' || 'typescript'",
         "args": {
             "snippet": "let workLeft = ${TM_SELECTED_TEXT}$0.length;\n${TM_SELECTED_TEXT}$1.forEach((item, index) => {\n\t// decrement and done\n\tworkLeft--;\n\tif(workLeft === 0){\n\t\t//\n\t};\n});"
         }
     },{
         "key": "ctrl+shift+g",
         "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus && editorLangId == 'javascript'",
+        "when": "editorTextFocus && editorLangId == 'javascript' || 'typescript'",
         "args": {
             "snippet": "for(let i = 0; i < ${TM_SELECTED_TEXT}$1; i++){\n\t//\n};"
         }
     },{
         "key": "ctrl+shift+m",
         "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus && editorLangId == 'javascript'",
+        "when": "editorTextFocus && editorLangId == 'javascript' || 'typescript'",
         "args": {
             "snippet": ".map((item, index) => ({\n\t//${TM_SELECTED_TEXT}$1\n}));"
         }
@@ -113,4 +103,80 @@ chalk
             "snippet": "for(int i = 0; i < ${TM_SELECTED_TEXT}$1; i++){\n\t//\n}"
         }
     },
+
+    // ---------------------------------------------------------- c++ ----------------------------------------------------------
+    {
+        "key": "ctrl+shift+f",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == 'cpp'",
+        "args": {
+            "snippet": "for(size_t i = 0; i < ${TM_SELECTED_TEXT}$1; i++){\n\t//\n}"
+        }
+    },
+    { // compile a static lib
+        "key": "ctrl+shift+u",
+        "command": "workbench.action.tasks.runTask",
+        "when": "editorTextFocus && editorLangId == 'cpp'",
+        "args": "staticlib"
+    },
+    
+    // ---------------------------------------------------------- go ----------------------------------------------------------
+    {
+        "key": "ctrl+shift+f",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == 'go'",
+        "args": {
+            "snippet": "for i := 0; i < ${TM_SELECTED_TEXT}$1; i++ {\n\t//\n}"
+        }
+    },
+    {
+        "key": "ctrl+shift+p",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == 'go'",
+        "args": {
+            "snippet": "fmt.Println(${TM_SELECTED_TEXT}$1);"
+        }
+    },
+    
+    // ---------------------------------------------------------- python ----------------------------------------------------------
+    {
+        "key": "ctrl+shift+p",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == 'python'",
+        "args": {
+            "snippet": "print(${TM_SELECTED_TEXT}$1)"
+        }
+    },
+    
+    // ---------------------------------------------------------- julia ----------------------------------------------------------
+    {
+        "key": "ctrl+shift+l",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == 'julia'",
+        "args": {
+            "snippet": "println(${TM_SELECTED_TEXT}$1)"
+        }
+    },{
+        "key": "ctrl+shift+p",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == 'julia'",
+        "args": {
+            "snippet": "println(${TM_SELECTED_TEXT}$1)"
+        }
+    },
+    
+    // ---------------------------------------------------------- global ----------------------------------------------------------
+    {
+        "key": "ctrl+s",
+        "command": "-workbench.action.files.save"
+    },
+    {
+        "key": "ctrl+s",
+        "command": "workbench.action.files.saveWithoutFormatting"
+    },
+    {
+        "key": "ctrl+k ctrl+shift+s",
+        "command": "-workbench.action.files.saveWithoutFormatting"
+    },
+    
 ]
