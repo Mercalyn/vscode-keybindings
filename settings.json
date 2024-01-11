@@ -42,7 +42,7 @@
     "workbench.colorTheme": "Default Dark+",
     "editor.guides.bracketPairs": true,
     "editor.trimAutoWhitespace": false,
-    /*"saveAndRun": {
+    "saveAndRun": { // obtain this by searching wk-j in the extensions and install the save and run, emeralds run and save doesn't work for me
         "commands": [
             {
                 "match": "\\.cpp$",
@@ -54,9 +54,14 @@
                 "cmd": "go run .",
                 "useShortcut": false,
                 "silent": false
+            },{
+                "match": "\\.py$",
+                "cmd": "py ${fileBasename}",
+                "useShortcut": false,
+                "silent": false
             }
         ]
-    },*/
+    },
     "go.testOnSave": true,
     "go.testTags": "",
     "code-runner.ignoreSelection": true,
@@ -78,4 +83,5 @@
     },
     "C_Cpp.default.cppStandard": "c++23",
     "editor.lightbulb.enabled": false,
+    "terminal.integrated.fontWeight": "normal",
 }
