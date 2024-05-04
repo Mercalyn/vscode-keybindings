@@ -144,7 +144,7 @@ chalk
         "command": "editor.action.insertSnippet",
         "when": "editorTextFocus && editorLangId == 'python'",
         "args": {
-            "snippet": "print(${TM_SELECTED_TEXT}$1)"
+            "snippet": "print(f\"{${TM_SELECTED_TEXT}$1}\")"
         }
     },
     

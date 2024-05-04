@@ -10,8 +10,8 @@
     },
     "remote.SSH.connectTimeout": 120,
     "workbench.editorAssociations": {
-        //"*.ipynb": "jupyter.notebook.ipynb",
-        "*.db": "default"
+        "*.db": "default",
+        "*.mpy": "default"
     },
     "code-runner.runInTerminal": true,
     //"C_Cpp.intelliSenseEngine": "Disabled",
@@ -42,7 +42,8 @@
     "workbench.colorTheme": "Default Dark+",
     "editor.guides.bracketPairs": true,
     "editor.trimAutoWhitespace": false,
-    "saveAndRun": { // obtain this by searching wk-j in the extensions and install the save and run, emeralds run and save doesn't work for me
+    "saveAndRun": {
+     // obtain this by searching wk-j in the extensions and install the save and run, emeralds run and save doesn't work for me
         "commands": [
             {
                 "match": "\\.cpp$",
@@ -82,6 +83,24 @@
         ],
     },
     "C_Cpp.default.cppStandard": "c++23",
-    "editor.lightbulb.enabled": false,
+    "editor.lightbulb.enabled": "off",
     "terminal.integrated.fontWeight": "normal",
+    "files.associations": {
+        "*.py": "python"
+    },
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [{
+            "scope": "string.quoted.docstring.multi.python",
+            "settings": {
+                "foreground": "#d54c6f",
+                "fontStyle": ""
+            }
+        },{
+            "scope": "string.quoted.single.python",
+            "settings": {
+                "foreground": "#dedede",
+                "fontStyle": ""
+            }
+        }]
+    }
 }
