@@ -43,6 +43,7 @@
     "editor.guides.bracketPairs": true,
     "editor.trimAutoWhitespace": false,
     "saveAndRun": {
+    
      // obtain this by searching wk-j in the extensions and install the save and run, emeralds run and save doesn't work for me
         "commands": [
             {
@@ -55,12 +56,12 @@
                 "cmd": "go run .",
                 "useShortcut": false,
                 "silent": false
-            },{
+            }/*,{
                 "match": "\\.py$",
-                "cmd": "py ${fileBasename}",
+                "cmd": "py ${fileBasename}", // py ${fileBasename} // py main.py // py E:\\Python\\ecosys\\evo_driver_ex1.py
                 "useShortcut": false,
                 "silent": false
-            }
+            }*/
         ]
     },
     "go.testOnSave": true,
