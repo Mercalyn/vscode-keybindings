@@ -5,7 +5,15 @@ default windows path:
 %appdata%/Roaming/Code/User
 -
 dont forget to install:
-chalk
+--no extensions needed currently
+
+
+useful keybindings might forget:
+ctrl k, j = expand all
+ctrl k, 2 = expand to 2 places
+ctrl shift tile = open console (normally just use a drag and drop nodemon)
+back arrow = navigate back
+alt up/down arrow = move selection up/down
 */
 [
     {
@@ -23,6 +31,10 @@ chalk
     {
         "key": "ctrl+alt+n",
         "command": "-code-runner.run"
+    },
+    {
+        "key": "cmd+alt+shift+i",
+        "command": "editor.action.inspectTMScopes"
     },
     // ---------------------------------------------------------- node.js // typescript ----------------------------------------------------------
     {
