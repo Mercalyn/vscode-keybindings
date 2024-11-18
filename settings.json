@@ -35,8 +35,7 @@
     "bracketPairColorizer.depreciation-notice": false,
     "editor.fontSize": 13,
     "editor.wordWrap": "on",
-    "editor.mouseWheelScrollSensitivity": 1.8,
-    "editor.fastScrollSensitivity": 2.6,
+    "editor.mouseWheelScrollSensitivity": 2.4,
     "editor.hover.enabled": false,
     "editor.inlayHints.enabled": "off",
     "workbench.colorTheme": "Default Dark+",
@@ -91,17 +90,29 @@
     },
     "editor.tokenColorCustomizations": {
         "textMateRules": [{
-            "scope": "string.quoted.docstring.multi.python",
+            "scope": "string.quoted.docstring.multi.python", // multi-line comment
             "settings": {
                 "foreground": "#d54c6f",
                 "fontStyle": ""
             }
         },{
-            "scope": "string.quoted.single.python",
+            "scope": "string.quoted.single.python", // string
             "settings": {
                 "foreground": "#dedede",
                 "fontStyle": ""
             }
         }]
-    }
+    },
+    "workbench.colorCustomizations": {
+        "editor.selectionBackground": "#00ff1f60", // selected text bg
+        "editor.selectionHighlightBackground": "#f5229e99", // find other selected text bg
+        // if have extension "select highlight in minimap" also highlights sidebar
+        "editor.wordHighlightBackground": "#00000000", // this procs after the above, set to xparent
+        "editor.foldBackground": "#0f4d4150" // folded func/block bg
+        //"editor.wordHighlightBackground": "#038c0066"
+        //"editor.findMatchHighlightBackground": "#FF0000FC"
+    },
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.size": "fill",
+    "editor.minimap.renderCharacters": false
 }
